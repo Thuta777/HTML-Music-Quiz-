@@ -1,0 +1,230 @@
+#gameFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none; /* prevent interactions while hidden */
+}
+
+#gameFrame.visible {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Menu */
+body {
+  margin: 0;
+  font-family: 'Impact', sans-serif;
+  background: url('') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-left: 25px; /* push menu away from edge */
+  padding-top: 35px;
+  padding-right: 25px;
+}
+
+/* Screen layout */
+.layout {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  height: 100vh;       /* fill entire viewport */
+  align-items: flex-start;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Menu box */
+.menu {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  width: 220px;
+  height: 83%;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  width: 350px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  width: 250px;
+  height: 90px;
+  margin-bottom: 1px;
+}
+
+.welcome {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 8px;
+}
+
+/*buttons*/
+
+button {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button {
+  width: 80%; 
+}
+
+button.alt1 {
+    background: black;
+    color: white;
+    padding-left: 10px;
+}
+
+button.alt1:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+button.alt2 {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+
+button.alt2:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* game screen container */
+.game-screen {
+    flex: 1;                    /* take all remaining horizontal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;                /* fill flex space */
+    height: 85%;               /* fill vertical space */
+    padding: 20px;                 /* remove extra space */
+    background: rgba(10, 20, 60, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+}
+
+/* Modal overlay over game window */
+.modal {
+    display: none;              /* hidden by default */
+    position: absolute;         /* relative to .game-screen */
+    top: 0;
+    left: 0;
+    width: 100%;                /* fill the game-screen */
+    height: 100%;               /* fill the game-screen */
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent */
+    z-index: 10;                /* above iframe */
+}
+
+.modal-content {
+    background: rgba(23, 52, 80, 0.85);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 80%;                 /* smaller box inside overlay */
+    max-width: 400px;
+}
+
+.modal-content label {
+  font-size: 1.1rem;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Volume Slide */
+#volumeSlider {
+    width: 80%;          /* slider width */
+    height: 40px;        /* slider track height */
+    margin: 10px 0;
+}
+
+/* Volume Slide button */
+#volumeSlider::-webkit-slider-thumb {
+    height: 30px;
+    width: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#volumeSlider::-moz-range-thumb {
+    height: 30px;
+    width: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Max Rounds */
+#roundsInput {
+    width: 60px;          /* adjust width of number input */
+    font-size: 1.2rem;    /* larger text inside input */
+    padding: 5px;
+}
+
+label[for="roundsInput"] {
+    font-size: 1.2rem;    /* larger label text */
+    margin-top: 10px;
+    display: block;
+}
+
+/* Instructions */
+#instructionsModal .modal-content p {
+    text-align: justify;      /* Justify the text */
+    line-height: 1.6;         /* Add spacing between lines */
+    margin-bottom: 1rem;      /* Add spacing after each paragraph */
+}
+
+

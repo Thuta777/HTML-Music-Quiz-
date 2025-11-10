@@ -1,0 +1,74 @@
+/* login.css */
+body {
+  margin: 0;
+  font-family: 'Impact', sans-serif;
+  background: url("") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  height: 100vh;
+}
+
+.login-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  display: block;   /* ensure consistent block layout */
+  margin: 5px auto;
+}
+
+/* Logo at top */
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+/* Inputs */
+input {
+  width: 60%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Buttons (reuse style scheme from menu) */
+button {
+  width: 40%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.alt1 {
+  background: black;
+  color: white;
+}
+
+button.alt1:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+button.alt2 {
+  background: white;
+  color: black;
+}
+
+button.alt2:hover {
+  background: black;
+  color: white;
+  transform: scale(1.05);
+}
