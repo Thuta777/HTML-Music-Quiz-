@@ -16,4 +16,4 @@ XAMPP download link: https://www.apachefriends.org/download.html
 Issues:
 - Game Screen is locked behind a login screen for which you must set up your own SQL server (unless you can rewrite the login system)
 - Guest Play is available but not sure if it works without the SQL server active or not
-- Songs are still required to be installed locally and added manually as an array inside game.php
+- Songs are still required to be available locally and added manually as an array inside game.php
