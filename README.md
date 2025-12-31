@@ -5,7 +5,7 @@ It's a basic music quiz where the user guesses a song from a 5 second randomly s
 Programming Languages:
 - HTML
 - PHP
-- SQL (if you still intended to use the login system)
+- SQL (if you still intend to use the login system)
 
 IDE used: VSCode with the basic HTML extensions
 
